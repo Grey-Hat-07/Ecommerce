@@ -7,12 +7,12 @@ const initialState = {
         category: "Category 1",
     }]
 }
-export const Productreducer = (state,{type, payload}) => {
+export const Productreducer = (state = initialState,{type, payload}) => {
     switch (type) {
         case Actiontype.SET_PRODUCTS:
             return state;
     
         default:
-            state;
+            return state;
     }
 }
