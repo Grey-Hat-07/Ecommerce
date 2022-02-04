@@ -1,21 +1,19 @@
 import Navbar from './components/Navbar';
-import Home from './components/Home';
 import React from 'react';
-import About from './components/About ';
+import Productdetail from './components/Productdetail';
+import Productlist from './components/Productlist';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <div>
      <Router>
       <Navbar />
-      
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" >
-          <About/>
-        </Route>
+        <Route exact path="/" component={Productlist} />
+        <Route path="/productdetail/:productid" component={Productdetail} />
+        <Route>404 Not Found</Route>
       </Switch>
       </Router>
      
