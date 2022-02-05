@@ -9,8 +9,8 @@ export default function Productcomponent() {
         if(title.length>20){
             title=title.substring(0,30)+"...";
         }
-        return (<div className="col-md-4 mb-2 " key={id}>
-            <Link to={`/product/${id}`}className='text-decoration-none text-dark'>
+        return (<div className="col-md-3 mb-2 " key={id}>
+            <Link to={`/productdetail/${id}`}className='text-decoration-none text-dark'>
                 <div className="card cardstyle cardhover">
                     <img src={image} className="card-img-top" alt={title} height="200" />
                     <div className="card-body">
