@@ -21,7 +21,9 @@ export default function Productlist() {
   return <div>
     <br/>
     <div className="container">
+      <div className="row justify-content-md-center">
       <Productcomponent />
+      </div>
     </div>
   </div>;
 }

@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 export default function Navbar() {
-  
+  let style={
+    zIndex: '100',
+  }
   return <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light navbarstyle">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light navbarstyle" style={style}>
   <div className="container-fluid">
     <Link className="navbar-brand" to="/"> E-Commerce</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
