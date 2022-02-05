@@ -1,17 +1,34 @@
 import React from 'react';
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import '../App.css'
+import { Cart, Buy } from './Icons';
+import { useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 export default function ProductsDetail() {
-  let { productid } = useParams();
-  console.log(productid);
-  return <div>
-      <h1>
+  const { productid } = useParams();
+  const products = useSelector((state) => state.allproduct.products);
+  return <div className='container mt-4'>
+      <div className="row">
+        <div className="col-md-5">
+          <img src={products[productid-1].image} className="card-img-top" alt={products[productid-1].title} height="400" />
+        </div>
+        <div className="col-md-7">
+          <h3>{products[productid-1].title}</h3>
+          <p className='text-muted'>{products[productid-1].category}</p>
 
-        ProductsDetail
-        this is a test for the new feature
-        do not forget to commit this
-        do nothing
-      </h1>
-      <p>{productid}</p>
+          <p>₹{products[productid-1].price}</p>
+          <p>⭐{products[productid-1].rating.rate}&emsp;
+          {products[productid-1].rating.count} Ratings</p> 
+          <p>{products[productid-1].description}</p>
+          <button className="btn btn-warning mt-3 py-2 buttonhover">
+            <Cart />
+            Add to cart
+            </button>
+            <button className="btn btn-info ms-3 mt-3 py-2 buttonhover">
+            <Buy />
+            Buy product
+            </button>
 
+          </div>
+      </div>
   </div>;
 }

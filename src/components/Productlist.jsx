@@ -17,7 +17,6 @@ export default function Productlist() {
   useEffect(()=>{
     getproduct();
   },[]) 
-  console.log(products,"product");
   return <div>
     <br/>
     <div className="container">
