@@ -7,7 +7,7 @@ export default function Categories() {
     
   }];
   products.map((product) => {
-    if(!categories.includes({category:product.category})){
+    if(!categories.includes(product.category)){
       categories.push({category:product.category,count:1});
     }
     else {
