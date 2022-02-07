@@ -6,6 +6,7 @@ import Productlist from './components/Productlist';
 import Categories from './components/Categories';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Cart from './components/Cart';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Productlist />
           </Fragment>} />
           <Route path="/productdetail/:productid" component={ProductsDetail} />
+          <Route path="/cart" component={Cart} />
           <Route>404 Not Found</Route>
         </Switch>
         <Footer />

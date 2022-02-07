@@ -15,7 +15,7 @@ export default function Productcomponent() {
                     <img src={image} className="card-img-top" alt={title} height="200" />
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
-                        <p className="card-text">{category}</p>
+                        <p className="card-text text-muted">{category}</p>
                         <p className="card-text">₹{price}</p>
                         <p className="card-text">⭐{rating.rate}</p>
                     </div>

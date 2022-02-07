@@ -11,3 +11,9 @@ export const selectedproduct = (product) => {
         payload: product
     }
 }
+export const addtocart = (product) => {
+    return {
+        type: Actiontype.ADD_TO_CART,
+        payload: product
+    }
+}
