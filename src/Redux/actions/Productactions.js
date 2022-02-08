@@ -17,3 +17,9 @@ export const addtocart = (product) => {
         payload: product
     }
 }
+export const removefromcart = (product) => {
+    return {
+        type: Actiontype.REMOVE_CART_PRODUCT,
+        payload: product
+    }
+}
